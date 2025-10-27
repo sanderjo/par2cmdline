@@ -864,10 +864,8 @@ bool CommandLine::ReadArgs(int argc, const char * const *argv)
         list<string>::iterator fn = filenames->begin();
         while (fn != filenames->end())
         {
-          cerr << "SJ101: raw *fn is: " << *fn << endl;
           // Convert filename from command line into a full path + filename
           string filename = DiskFile::GetCanonicalPathname(*fn);
-          cerr << "SJ201: ... and resulting filename is: " << filename << endl;
           rawfilenames.push_back(filename);
           ++fn;
         }
