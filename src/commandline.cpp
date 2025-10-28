@@ -865,6 +865,7 @@ bool CommandLine::ReadArgs(int argc, const char * const *argv)
         while (fn != filenames->end())
         {
           // Convert filename from command line into a full path + filename
+          // SJ to insert something
           string filename = DiskFile::GetCanonicalPathname(*fn);
           rawfilenames.push_back(filename);
           ++fn;
